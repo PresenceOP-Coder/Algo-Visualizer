@@ -6,8 +6,9 @@ import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
 import PascalTriangle from "./PascalTriangle";
 import LCSPage from "./LCS";
-import CoinChange from "./CoinChange"; // ✅ Added import
+import CoinChange from "./CoinChange";
 import RodCutting from "./RodCutting";
+import KMPSearch from "./KMPSearch";
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -51,7 +52,7 @@ export default function DynamicProgrammingPage() {
             <LCSPage />
           </div>
         );
-      case "CoinChange": // ✅ Added new algorithm case
+      case "CoinChange":
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <CoinChange />
@@ -61,6 +62,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <RodCutting />
+          </div>
+        );
+      case "KMPSearch":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <KMPSearch />
           </div>
         );
       default:
@@ -127,8 +134,9 @@ export default function DynamicProgrammingPage() {
           <option value="Knapsack">Knapsack</option>
           <option value="PascalTriangle">Pascal Triangle</option>
           <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
-          <option value="CoinChange">Coin Change</option> {/* ✅ Added */}
+          <option value="CoinChange">Coin Change</option>
           <option value="RodCutting">Rod Cutting</option>
+          <option value="KMPSearch">KMP String Search</option>
         </select>
 
         <button
